@@ -3,7 +3,8 @@ import router from './src/routes/main.js'
 const port = 8080;
 const app = express();
 
-app.use(router)
+app.use(express.json());
+app.use(router);
 
 app.listen(port || 8080, (error) => {
     if (error) {
