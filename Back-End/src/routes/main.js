@@ -1,7 +1,7 @@
 import express from 'express';
+import listarUser from '../controller/controller.js';
 const router = express();
-
-const handlers = [];
+const listar = listarUser;
 
 router.post('/new_user', (req, res) => {
     const user = req.body;
@@ -9,9 +9,7 @@ router.post('/new_user', (req, res) => {
     res.status(201).json("Usuário criado!")
 });
 
-router.get('/', (req, res) => {
-    res.status(200).json(handlers);
-});
+router.get('/', listar);
 
 
 export default router;
