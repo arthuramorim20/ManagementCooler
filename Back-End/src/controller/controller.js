@@ -7,6 +7,20 @@ const listarUser = async (req, res) => {
         console.error(err);
         res.status(500).json({ error: 'Erro ao buscar' });
     }
+};
+
+const criarUser = async (req, res) => {
+    try {
+        const { responsavel, setor, marca, capacidade, gas, servicos, tecnico, data, proxmanutencao, status } = req.body;
+        const result = await pool.query(`INSERT INTO arCond (responsavel, setor, marca, capacidade, gas, servicos, tecnico, data, proxmanutencao, status) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $8, $9, $10);`)
+        res.json(result)
+    } catch (err) {
+        console.log(err);
+        res.status(404).json({error: 'erro ao criar'})
+    }
 }
 
-export default listarUser;
+export {
+    listarUser,
+    criarUser
+};
