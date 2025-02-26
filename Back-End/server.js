@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 app.use(router);
-app.use(express.urlencoded({ extended: true }))
+// app.use(express.urlencoded({ extended: true }))
 
 app.listen(port || 8080, (error) => {
     if (error) {
