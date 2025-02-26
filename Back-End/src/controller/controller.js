@@ -1,8 +1,9 @@
-import pool from '../config/db.js'
+import arcondicionado from '../models/arcondicionado.js';
+
 const listarUser = async (req, res) => {
     try {
-        const { rows } = await pool.query('SELECT * FROM arCond;');
-        res.json(rows);
+        const result = await arcondicionado.findAll();
+        res.json(result);
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Erro ao buscar' });
