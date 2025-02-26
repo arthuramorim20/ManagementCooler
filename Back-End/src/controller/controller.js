@@ -1,8 +1,11 @@
+import { where } from 'sequelize';
 import arCond from '../models/arcondicionado.js';
 
 const listarUser = async (req, res) => {
     try {
-        const result = await arCond.findAll();
+        const result = await arCond.findAll({
+            order: [['id', 'ASC']]
+        });
         res.json(result);
     } catch (err) {
         console.error(err);
@@ -13,7 +16,14 @@ const listarUser = async (req, res) => {
 const criarUser = async (req, res) => {
     try {
         const { responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status } = req.body;
-        const result = await arCond.create({ responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status })
+        const lastUser = await arCond.findOne({
+            order: [['id', 'DESC']]
+        });
+
+        const newPosition = lastUser ? lastUser.position + 1 : 1;
+
+        const result = await arCond.create({ responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status }, {position: newPosition});
+        
         res.json(result);
     } catch (err) {
         console.log(err);
