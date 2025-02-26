@@ -1,8 +1,8 @@
-import arcondicionado from '../models/arcondicionado.js';
+import arCond from '../models/arcondicionado.js';
 
 const listarUser = async (req, res) => {
     try {
-        const result = await arcondicionado.findAll();
+        const result = await arCond.findAll();
         res.json(result);
     } catch (err) {
         console.error(err);
@@ -12,17 +12,46 @@ const listarUser = async (req, res) => {
 
 const criarUser = async (req, res) => {
     try {
-        const { responsavel, setor, marca, capacidade, gas, servicos, tecnico, data, proxmanutencao, status } = req.body;
-        const { rows } = await pool.query(`INSERT INTO arCond (${responsavel}, ${setor}, ${marca}, ${capacidade}
-            , ${gas}, ${servicos}, ${tecnico}, ${data}, ${proxmanutencao}, ${status}) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $8, $9, $10) RETURNING *;`);
-        res.json(rows);
+        const { responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status } = req.body;
+        const result = await arCond.create({ responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status })
+        res.json(result);
     } catch (err) {
         console.log(err);
-        res.status(404).json({error: 'erro ao criar'});
+        res.status(404).json({ error: 'erro ao criar' });
     };
+}
+
+const updateUser = async (req, res) => {
+    try {
+        const { id, responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status } = req.body;
+        const result = await arCond.update({ responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status },{ where: {
+            id: id
+        }} )
+        res.json(result)
+    } catch (err) {
+        console.error(err);
+        res.status(404).json({ error: 'erro ao atualizar' });
+    }
+}
+
+const deleteUser = async (req, res) => {
+    try {
+        const { id } = req.body;
+        const result = await arCond.destroy({
+            where: {
+                id:id
+            } 
+        })
+        res.json(result);
+    } catch (err){
+        console.error(err);
+        res.status(404).json({ error: 'erro ao excluir' });
+    }
 }
 
 export {
     listarUser,
-    criarUser
+    criarUser,
+    updateUser,
+    deleteUser
 };
