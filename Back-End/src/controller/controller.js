@@ -1,6 +1,6 @@
 import arCond from '../models/arcondicionado.js';
 
-const listarUser = async (req, res) => {
+const listarUser = async (req, res) => {  //Controller de ROTA GET
     try {
         const result = await arCond.findAll({
             order: [['id', 'ASC']]
@@ -12,11 +12,10 @@ const listarUser = async (req, res) => {
     }
 };
 
-const criarUser = async (req, res) => {
+const criarUser = async (req, res) => {  //Controller de ROTA POST
     try {
         const { responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status } = req.body;
-        const result = await arCond.create({ responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status }, {position: newPosition});
-        
+        const result = await arCond.create({ responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status });
         res.json(result);
     } catch (err) {
         console.log(err);
@@ -24,7 +23,7 @@ const criarUser = async (req, res) => {
     };
 }
 
-const updateUser = async (req, res) => {
+const updateUser = async (req, res) => { //Controller de ROTA PUT
     try {
         const { id, responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status } = req.body;
         const result = await arCond.update({ responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status },{ where: {
@@ -37,7 +36,7 @@ const updateUser = async (req, res) => {
     }
 }
 
-const deleteUser = async (req, res) => {
+const deleteUser = async (req, res) => {  // Controller de ROTA DELETE
     try {
         const { id } = req.body;
         const result = await arCond.destroy({
