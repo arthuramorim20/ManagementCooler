@@ -1,16 +1,18 @@
-document.addEventListener('click', (e) => {
-    e.preventDefault()
-    const el = e.target;
+const db = document.getElementById("dbRegister")
 
-    if (el.classList.contains('register')) {
-        postCadastro();
-        console.log('clicou')
-    }
+db.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = new FormData(db);
+
+    const response = await fetch('http://localhost:8080/new_user', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(form)
+    });
+
+    const respostaDoServidor = await response.text();
+    document.getElementById('resposta').innerText = respostaDoServidor;
 })
 
-function postCadastro() {
-    fetch("http://localhost:8080/new_user")
-        .then(response => response.json())
-        .then(data => console.log(data.message))
-        .catch(error => console.error("Erro:", error));
-}
