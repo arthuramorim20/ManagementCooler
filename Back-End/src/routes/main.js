@@ -6,11 +6,11 @@ const router = express();
 
 router.post('/new_user', cors(), criarUser);
 
-router.get('/users', listarUser);
+router.get('/users', cors(), listarUser);
 
-router.put('/update_user', updateUser);
+router.put('/update_user', cors(), updateUser);
 
-router.delete('/deleteUser', deleteUser)
+router.delete('/deleteUser', cors(), deleteUser)
 
 
 export default router;

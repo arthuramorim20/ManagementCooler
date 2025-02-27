@@ -15,7 +15,8 @@ const listarUser = async (req, res) => {  //Controller de ROTA GET
 const criarUser = async (req, res) => {  //Controller de ROTA POST
     try {
         const { responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status } = req.body;
-        const result = await arCond.create({ responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status });
+        const result = await arCond.create({ responsavel, setor, marca, capacidade, gas, servicos,
+            tecnico, proxmanutencao, status });
         res.json(result);
     } catch (err) {
         console.log(err);
