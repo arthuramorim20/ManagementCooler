@@ -1,9 +1,10 @@
 import express from 'express';
+import cors from 'cors';
 import { listarUser, criarUser, updateUser, deleteUser } from '../controller/controller.js';
 const router = express();
 
 
-router.post('/new_user', criarUser);
+router.post('/new_user', cors(), criarUser);
 
 router.get('/users', listarUser);
 
