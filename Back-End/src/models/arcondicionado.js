@@ -40,7 +40,7 @@ export const arCond = sequelize.define("arCond", {
         allowNull: false
     },
     status: {
-        type: DataTypes.ENUM('Pendente', 'Concluído'),
+        type: DataTypes.INTEGER,
         allowNull: false
     }
 

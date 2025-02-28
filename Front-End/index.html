@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/global/style.css">
     <title>Document</title>
 </head>
 <body>
-    <form action="/new_user" id="dbRegister">
-        <p><input type="text" name="responsavel"></p>
-        <p><input type="text" name="setor"></p>
-        <p><input type="text" name="marca"></p>
-        <p><input type="text" name="capacidade"></p>
-        <p><input type="text" name="gas"></p>
-        <p><input type="text" name="servicos"></p>
-        <p><input type="text" name="tecnico"></p>
-        <p><input type="text" name="proxmanutencao"></p>
-        <p>Status:<input type="number" name="status"></p>
+    <form method="post" id="dbRegister" class="formRegister">
+        <p>Responsável:</p>
+        <input type="text" name="responsavel">
+        <p>Setor:</p>
+        <input type="text" name="setor">
+        <p>Marca:</p>
+        <input type="text" name="marca">
+        <p>Capacidade:</p>
+        <input type="text" name="capacidade">
+        <p>Gás:</p>
+        <input type="text" name="gas">
+        <p>Serviços:</p>
+        <input type="text" name="servicos">
+        <p>Técnico:</p>
+        <input type="text" name="tecnico">
+        <p>Próx. Manutenção:</p>
+        <input type="text" name="proxmanutencao">
+        <p>Status:</p>
+        <input type="number" name="status">
         <button type="submit" class="register">Enviar</button>
     </form>
     <div id="resposta">

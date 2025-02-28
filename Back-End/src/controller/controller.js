@@ -14,9 +14,7 @@ const listarUser = async (req, res) => {  //Controller de ROTA GET
 
 const criarUser = async (req, res) => {  //Controller de ROTA POST
     try {
-        const { responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status } = req.body;
-        const result = await arCond.create({ responsavel, setor, marca, capacidade, gas, servicos,
-            tecnico, proxmanutencao, status });
+        const result = await arCond.create(req.body);
         res.json(result);
     } catch (err) {
         console.log(err);
@@ -26,8 +24,8 @@ const criarUser = async (req, res) => {  //Controller de ROTA POST
 
 const updateUser = async (req, res) => { //Controller de ROTA PUT
     try {
-        const { id, responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status } = req.body;
-        const result = await arCond.update({ responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status },{ where: {
+        const { id } = req.body;
+        const result = await arCond.update(req.body ,{ where: {
             id: id
         }} )
         res.json(result)
