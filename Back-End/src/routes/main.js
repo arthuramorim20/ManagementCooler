@@ -9,7 +9,7 @@ router.get('/users' ,listarUser);
 
 router.put('/update_user' ,updateUser);
 
-router.delete('/deleteUser' ,deleteUser)
+router.delete('/deleteUser' ,deleteUser);
 
 
 export default router;

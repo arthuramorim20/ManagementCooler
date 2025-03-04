@@ -12,22 +12,23 @@ const listarUser = async (req, res) => {  //Controller de ROTA GET
     }
 };
 
-const criarUser = async (req, res) => {  //Controller de ROTA POST
+const criarUser = async (req, res) => {
     try {
-        const result = await arCond.create(req.body);
-        res.json(result);
+        const result = await arCond.create(req.body)
+        res.status(201).json(result);
     } catch (err) {
         console.log(err);
-        res.status(404).json({ error: 'erro ao criar' });
-    };
+    }
 }
 
 const updateUser = async (req, res) => { //Controller de ROTA PUT
     try {
         const { id } = req.body;
-        const result = await arCond.update(req.body ,{ where: {
-            id: id
-        }} )
+        const result = await arCond.update(req.body, {
+            where: {
+                id: id
+            }
+        })
         res.json(result)
     } catch (err) {
         console.error(err);
@@ -40,11 +41,11 @@ const deleteUser = async (req, res) => {  // Controller de ROTA DELETE
         const { id } = req.body;
         const result = await arCond.destroy({
             where: {
-                id:id
-            } 
+                id: id
+            }
         })
         res.json(result);
-    } catch (err){
+    } catch (err) {
         console.error(err);
         res.status(404).json({ error: 'erro ao excluir' });
     }
