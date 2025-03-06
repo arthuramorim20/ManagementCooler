@@ -1,7 +1,7 @@
-import { Sequelize, DataTypes } from "sequelize";
+import { DataTypes } from "sequelize";
 import sequelize from "../config/db.js";
 
-export const arCond = sequelize.define("arCond", {
+export const arCond = sequelize.define("arConds", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -40,7 +40,7 @@ export const arCond = sequelize.define("arCond", {
         allowNull: false
     },
     status: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
     }
 
@@ -49,14 +49,14 @@ export const arCond = sequelize.define("arCond", {
 });
 
 
+
 try {
-    arCond.sync().then(()=>{
-        console.log("Tabela arCond criada com sucesso")
+    arCond.sync({force: false}).then(()=>{
+        console.log("Tabela arConds criada com sucesso");
     })
 }catch(error){
     console.error("Não foi criada a tabela:", error)
 }
-
 
 
 export default arCond;
