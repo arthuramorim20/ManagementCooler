@@ -24,12 +24,10 @@ db.addEventListener('submit', async (e) => {
             servicos: servicos.value,
             tecnico: tecnico.value, 
             proxmanutencao: proxmanutencao.value, 
-            status: 1
+            status: status.value
         })
     });
     
 
-    const respostaDoServidor = response.text()
-    document.getElementById('resposta').innerText = respostaDoServidor;
 });
 
