@@ -8,7 +8,7 @@ const listarUser = async (req, res) => {  //Controller de ROTA GET
         res.json(result);
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: 'Erro ao buscar' });
+        res.json({ error: 'Erro ao buscar' });
     }
 };
 
@@ -18,6 +18,7 @@ const criarUser = async (req, res) => {
         res.status(201).json(result);
     } catch (err) {
         console.log(err);
+        res.json({err: "erro ao criar"});
     }
 }
 
@@ -32,7 +33,7 @@ const updateUser = async (req, res) => { //Controller de ROTA PUT
         res.json(result)
     } catch (err) {
         console.error(err);
-        res.status(404).json({ error: 'erro ao atualizar' });
+        res.json({ error: 'erro ao atualizar' });
     }
 }
 
