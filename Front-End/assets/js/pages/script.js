@@ -2,13 +2,8 @@ const db = document.getElementById("dbRegister");
 
 db.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const form = new FormData(db);
     const { responsavel, setor, marca, capacidade, gas, servicos,
         tecnico, proxmanutencao, status } = e.target;
-
-    console.log(responsavel)
-
-    await fetch('http://localhost:8080/users').then((res) => res.json()).then((data) => console.log(data))
 
     const response = await fetch('http://localhost:8080/new_user', {
         method: 'POST',
@@ -27,6 +22,8 @@ db.addEventListener('submit', async (e) => {
             status: status.value
         })
     });
+
+    console.log(response)
     
 
 });
