@@ -26,6 +26,10 @@ body {
     background: var(--bg-default);
 }
 
+.menubar {
+    background-color: #333;
+
+}
 
 /* Dashboard  */
 .sidebar {
@@ -41,6 +45,7 @@ body {
     .menu {
         margin: 20px;
         text-align: center;
+        
     }
 }
 
