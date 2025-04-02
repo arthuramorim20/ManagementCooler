@@ -26,7 +26,10 @@ body {
     background: var(--bg-default);
 }
 
-aside {
+
+/* Dashboard  */
+.sidebar {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     height: 100em;
@@ -34,6 +37,11 @@ aside {
     border: solid;
     border-width: 1px;
     background-color: var(--bg-light);
+    list-style-type: none;
+    .menu {
+        margin: 20px;
+        text-align: center;
+    }
 }
 
 ::-webkit-scrollbar-track {
