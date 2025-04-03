@@ -2,13 +2,15 @@
 
 :root {
     --bg-default: #ebebeb;
-    --bg-light: #1E88E5;
+    --bg-light: #6A8380;
+    --bg-light2: #20494D;
     --clr-light: #E3F2FD;
-    --clr-deep: #1664d9;
-    --clr-deep2: #3394ea;
+    --clr-deep: #04272d;
     --clr-none: transparent;
-    --clr-dark: #333;
-    --clr-on: #4ef56a;
+    --clr-dark: #001512;
+    --clr-on: #02cdad;
+    --clr-text: #F2E1C7;
+    --clr-text2: #D1C2A5;
     --clr-error: #ff8484;
     --clr-border: #ccc;
     --clr-error-border: #bb2d2d;
@@ -24,23 +26,45 @@
 body {
     display: flex;
     background: var(--bg-default);
+    color: var(--clr-text);
 }
 
-.menubar {
-    background-color: #333;
-    width: 149em;
-    height: 4em;
+a {
+    text-decoration: none;
+    color: inherit;
 }
+
 
 /* Dashboard  */
+
+.menubar {
+    background-color: var(--bg-light2);
+    width: 149em;
+    height: 4em;
+    h1 {
+        font-size: 20pt;
+        margin-left: 12px;
+        padding-top: 10px;
+        color: var(--clr-text2);
+    }
+
+    .search-cooler {
+        background-image: url('../img/Vector_search_icon.svg.png') 10px;
+        background-position: top;
+    }
+}
+
+
 .sidebar {
+    font-size: 13pt;
     display: flex;
     flex-direction: column;
     height: 100em;
     width: 12em;
-    border: solid;
-    border-width: 1px;
+    color: var(--clr-text);
     background-color: var(--bg-light);
+    padding-top: 20px;
+    padding-bottom: 20;
     .menu {
         text-align: center;
         list-style-type: none;
