@@ -37,6 +37,7 @@ a {
 
 
 /* Dashboard  */
+/* navbar top */
 
 .menubar {
     background-color: var(--bg-light2);
@@ -56,12 +57,12 @@ a {
         color: var(--clr-text2);
     }
 
-    .search-cooler {
-        background-image: url('../img/Vector_search_icon.svg.png') 10px;
-        background-position: top;
-    }
+
 }
 
+
+
+/* sidebar */
 
 .sidebar {
     font-size: 13pt;
@@ -72,21 +73,42 @@ a {
     color: var(--clr-text);
     background-color: var(--bg-light);
     padding-top: 20px;
-    padding-bottom: 20;
+    padding-bottom: 20px;
 
     .menu {
         text-align: center;
+        margin-top: 9px;
+    }
+
+    .panel .control-panel {
+        font-size: 16pt;
+        color: #001512;
+    }
+
+    .panel .control-panel :hover {
+        color: var(--clr-on);
+    }
+
+    .panel .span-register {
+        color: #001512;
+    }
+    
+    .panel .span-register :hover {
+        color: var(--clr-on);
     }
 
     .menu .submenu {
-        background-color: var(--clr-error-border);
+        background-color: var(--bg-light2);
+        border-radius: 17px;
         width: 50mm;
-        margin-left: 15px;
+        margin-left: 7px;
         margin-right: 15px;
+
+
     }
 
-    .menu .panel i :hover {
-        color: var(--clr-on);
+    .submenu i {
+        color: #001512;
     }
 
     .submenu li :hover {
@@ -108,3 +130,5 @@ a {
     background: var(--clr-deep);
     border-radius: 3px;
 }
+
+/* Interaction script */
