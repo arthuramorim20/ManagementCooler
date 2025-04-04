@@ -4,63 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/global.css">
+    <!-- <link rel="stylesheet" href="../../css/global.css"> -->
     <link rel="stylesheet" href="./register-cooler.css">
     <link rel="stylesheet" href="../../css/style.css">
     <title>CoolerMaster</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <nav class="menubar">
-            <!-- <ul class="button-main">
-                <li>
-                    <h1><a href="../Dashboard/dashboard.html">CoolerMaster</a></h1>
-                </li>
-                <li>
-                    <h1 class="search-cooler"><svg xmlns="http://www.w3.org/2000/svg" height="19" width="17"
-                            viewBox="0 0 512 512">
-                            <path fill="#f2e1c7"
-                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                        </svg></h1>
-                </li>
-            </ul> -->
+    <div class="container-1">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-3" href="../Dashboard/dashboard.html">CoolerMaster</a>
 
+                <div class="justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="d-flex" role="search">
+                        <button class="btn btn-outline-success" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="" width="17" viewBox="0 0 512 512">
+                                <path fill="#f2e1c7"
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- <nav class="menubar">
             <div class="logo">
                 <a href="../Dashboard/dashboard.html">CoolerMaster</a>
             </div>
 
             <div class="searchIcon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="19" width="17" viewBox="0 0 512 512">
+                <svg xmlns="http://www.w3.org/2000/svg" height="" width="17" viewBox="0 0 512 512">
                     <path fill="#f2e1c7"
                         d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
                 </svg>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Ar-condicionados</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-
-        <div class="register">
-            <header>
-                <h2>Cadastro</h2>
-                <i class='bx bx-x'></i>
-            </header>
-
-            <div class="header-search">
-                <div>
-                    <label>Codigo:</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label>Descrição:</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <button>Inserir</button>
-                </div>
-            </div>
-        </div>
-
-        <aside class="sidebar">
-            <ul class="menu panel">
+        </nav> -->
+        <aside class="bg-success-subtle side-bar-layout">
+            <!-- <ul class="menu panel">
                 <li class="control-panel">
                     <a href="../dashboard/dashboard.html">
                         <i class='bx bxs-dashboard'></i> Painel de controle
@@ -77,8 +74,57 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
+
+            <div class="side-bar-list  list-group">
+                <a href="../Dashboard/dashboard.html"
+                    class="list-group-item list-group-item-action list-group-item-success">Painel de controle</a>
+                <i class="list-group-item list-group-item-action list-group-item-success">Cadastrar</i>
+                <a href="../register-cooler/register-cooler.html"
+                    class="list-group-item list-group-item-action list-group-item-success">Registrar</a>
+            </div>
         </aside>
+
+        <div class="form">
+            <div class="input-group mb-1">
+                <span class="input-group-text" id="basic-addon1">Responsavel</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-1">
+                <span class="input-group-text" id="basic-addon1">@example.com</span>
+                <input type="text" class="form-control" placeholder="Recipient's username"
+                    aria-label="Recipient's username" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-1">
+                <label for="basic-url" class="form-label">Your vanity URL</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                </div>
+                <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+            </div>
+
+            <div class="input-group mb-1">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+            </div>
+
+            <div class="input-group mb-1">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+            </div>
+
+            <div class="input-group mb-1">
+                <span class="input-group-text">With textarea</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+        </div>
+
     </div>
     <script src="./register-cooler.js"></script>
 </body>
