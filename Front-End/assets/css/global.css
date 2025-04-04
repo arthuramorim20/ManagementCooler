@@ -25,7 +25,7 @@
 }
 
 body {
-    background: var(--bg-default);
+    background: var(--clr-border);
     color: var(--clr-text);
 }
 
@@ -33,6 +33,18 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.container {
+    .register {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 149em;
+        height: 50em;
+
+    }
+}
+
 
 
 /* Dashboard  */
@@ -49,12 +61,19 @@ a {
     /* width: 100vw; */
     /* height: 4em; */
 
-    /* .button-main {
-        display: flex;
-        flex-direction: row;
+    .logo {
+        font-size: 20pt;
+        margin-left: 12px;
+        padding: 10px 12px;
+        color: var(--clr-text2);
     }
 
-    h1 {
+    .searchIcon {
+        cursor: pointer;
+        color: var(--clr-on);
+    }
+
+    /*h1 {
         font-size: 20pt;
         margin-left: 12px;
         padding-top: 10px;
@@ -86,7 +105,6 @@ a {
 
     .panel .control-panel {
         font-size: 16pt;
-        color: #001512;
     }
 
     .panel .control-panel :hover {
@@ -95,6 +113,7 @@ a {
 
     .panel .span-register {
         color: #001512;
+        font-size: 17pt;
     }
     
     .panel .span-register :hover {
@@ -112,15 +131,13 @@ a {
 
     }
 
-    .submenu i {
-        color: #001512;
-    }
-
     .submenu li :hover {
         color: var(--clr-on);
     }
 
 }
+
+
 
 /**Editing scrollbar**/
 ::-webkit-scrollbar-track {
@@ -135,5 +152,6 @@ a {
     background: var(--clr-deep);
     border-radius: 3px;
 }
+
 
 /* Interaction script */
