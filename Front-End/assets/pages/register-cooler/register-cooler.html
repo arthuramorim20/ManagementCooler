@@ -18,7 +18,7 @@
 
 <body>
     <div class="container-1">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <a class="navbar-brand fs-3" href="../Dashboard/dashboard.html">CoolerMaster</a>
 
@@ -34,7 +34,6 @@
                 </div>
             </div>
         </nav>
-
 
 
 
@@ -58,7 +57,7 @@
                 </ul>
             </div>
         </nav> -->
-        <aside class="bg-success-subtle side-bar-layout">
+        <aside class="side-bar-layout">
             <!-- <ul class="menu panel">
                 <li class="control-panel">
                     <a href="../dashboard/dashboard.html">
@@ -78,63 +77,20 @@
                 </li>
             </ul> -->
 
-            <div class="side-bar-list  list-group">
+            <div class="side-bar-list list-group list-group-item-dark">
                 <a href="../Dashboard/dashboard.html"
-                    class="list-group-item list-group-item-action list-group-item-success">Painel de controle</a>
-                <i class="list-group-item list-group-item-action list-group-item-success">Cadastrar</i>
-                <a href="../register-cooler/register-cooler.html"
-                    class="list-group-item list-group-item-action list-group-item-success">Registrar</a>
+                    class="btn-dashboard list-group-item list-group-item-action list-group-item ">Dashboard</a>
+                <button class="btn list-group-item dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Gerenciamento
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../register-cooler/register-cooler.html">Registrar</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
             </div>
         </aside>
-
-        <div class="container-sm">
-            <form class="row gy-2 gx-2">
-                <div class="col-md-5">
-                    <label class="form-label">Responsavel</label>
-                    <input type="email" class="form-control" id="inputEmail4">
-                </div>
-                <div class="col-md-5">
-                    <label class="form-label">Setor</label>
-                    <input type="password" class="form-control" id="inputPassword4">
-                </div>
-                <div class="col-md-5">
-                    <label class="form-label">Marca</label>
-                    <input type="text" class="form-control" id="inputAddress">
-                </div>
-                <div class="col-md-5">
-                    <label class="form-label">Capacidade</label>
-                    <input type="text" class="form-control" id="inputAddress2"
-                        placeholder="Apartment, studio, or floor">
-                </div>
-                <div class="col-md-5">
-                    <label class="form-label">Gás</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Serviços</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
-                <div class="col-md-2">
-                    <label class="form-label">Técnico</label>
-                    <input type="text" class="form-control" id="inputZip">
-                </div>
-                <div class="col-md-2">
-                    <label class="form-label">Próxima Manutenção</label>
-                    <input type="text" class="form-control" id="inputZip">
-                </div>
-                <div class="col-md-2">
-                    <label class="form-label">Status do aparelho</label>
-                    <input type="text" class="form-control" id="inputZip">
-                </div>
-                <div class="col-11">
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                </div>
-            </form>
-        </div>
-
-
-
-
 
     </div>
     <script src="./register-cooler.js"></script>
