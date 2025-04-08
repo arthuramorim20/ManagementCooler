@@ -17,72 +17,89 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2" href="../Dashboard/dashboard.html">CoolerMaster</a>
+
+            <div class="search-div justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex" role="search">
+                    <button class="btn btn-search btn-outline-success" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="" width="17" viewBox="0 0 512 512">
+                            <path fill="#f2e1c7"
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
     <div class="container-1">
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand fs-2" href="../Dashboard/dashboard.html">CoolerMaster</a>
 
-                <div class="search-div justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-search btn-outline-success" type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="" width="17" viewBox="0 0 512 512">
-                                <path fill="#f2e1c7"
-                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                            </svg>
-                        </button>
-                    </form>
+        <div class="sidebar">
+            <aside class="side-bar-layout">
+                <div class="side-bar-list list-group list-group-item-dark">
+                    <a href="../Dashboard/dashboard.html"
+                        class="list-group-item list-group-item-action list-group-item ">Dashboard</a>
+                    <i class="btn list-group-item dropdown-toggle btn-md" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Gerenciamento
+                    </i>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../register-cooler/register-cooler.html">Registrar</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
                 </div>
-            </div>
-        </nav>
+            </aside>
+        </div>
 
-        <form class="main row g-3" id="main">
-            <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Responsavel</label>
-                <input type="email" class="form-control" id="inputEmail4">
+        <div class="container-layout">
+            <div class="main-content">
+                <form class="main row g-3" id="main">
+                    <div class="col-md-6">
+                        <label for="responsavel" class="form-label">Responsavel:</label>
+                        <input type="text" class="form-control" id="responsavel">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="setor" class="form-label">Setor:</label>
+                        <input type="text" class="form-control" id="setor">
+                    </div>
+                    <div class="col-12">
+                        <label for="marca" class="form-label">Marca:</label>
+                        <input type="text" class="form-control" id="marca">
+                    </div>
+                    <div class="col-12">
+                        <label for="capacidade" class="form-label">Capacidade:</label>
+                        <input type="text" class="form-control" id="capacidade">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="gas" class="form-label">Gás:</label>
+                        <input type="text" class="form-control" id="gas">
+                    </div>
+                    <div class="col-md-8">
+                        <label for="servicos" class="form-label">Serviço:</label>
+                        <input type="text" class="form-control" id="servicos">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="tecnico" class="form-label">Técnico:</label>
+                        <input type="text" class="form-control" id="tecnico">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="proxmanutencao" class="form-label">Próxima Manutenção:</label>
+                        <input type="date" class="form-control" id="proxmanutencao">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="estado" class="form-label">Status:</label>
+                        <input type="text" class="form-control" id="estado">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </form>
             </div>
-            <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Setor</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-12">
-                <label for="inputAddress2" class="form-label">Capacidade</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-6">
-                <label for="inputZip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-            <div class="col-md-5">
-                <label for="inputPassword4" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </div>
-        </form>
-        <aside class="side-bar-layout">
-            <div class="side-bar-list list-group list-group-item-dark">
-                <a href="../Dashboard/dashboard.html"
-                    class="list-group-item list-group-item-action list-group-item ">Dashboard</a>
-                <i class="btn list-group-item dropdown-toggle btn-md" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Gerenciamento
-                </i>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="../register-cooler/register-cooler.html">Registrar</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
-        </aside>
+        </div>
+
 
     </div>
     <script src="./register-cooler.js"></script>
