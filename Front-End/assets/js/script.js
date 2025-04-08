@@ -16,14 +16,15 @@ behaviorBtnSearch.style.cursor = `text`
 `
 */
 
-document.addEventListener('click', e => {
+divSearch.addEventListener('click', e => {
     e.preventDefault();
-
     if (e.target.classList.contains('btn')) {
         searchBtn.replaceWith(behaviorBtnSearch)
     }
-    if (e.target.classList.contains('main')) {
-        behaviorBtnSearch.replaceWith(searchBtn)
-    }
+    
 }
 )
+
+document.getElementById('main').addEventListener('click', e => {
+    behaviorBtnSearch.replaceWith(searchBtn)
+})

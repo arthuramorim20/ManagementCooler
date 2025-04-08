@@ -20,11 +20,7 @@
     font-family: 'poppins';
 }
 
-.row {
-    background-color: aqua;
 
-
-}
 
 .navbar {
     background-color: var(--bg-light2);
@@ -45,4 +41,14 @@
     padding-top: 10px;
     width: 11em;
 
+}
+
+.main {
+    background-color: #02cdad;   
+    padding: 25px 25px 25px 25px;
+    width: 50em;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    
 }
