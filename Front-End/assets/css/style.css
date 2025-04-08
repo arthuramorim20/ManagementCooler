@@ -46,9 +46,22 @@
 .main {
     background-color: #02cdad;   
     padding: 25px 25px 25px 25px;
-    width: 135vh;
+    width: 600px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.test .sidebar-test {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

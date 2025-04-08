@@ -35,41 +35,6 @@
             </div>
         </nav>
 
-        <form class="main row g-3" id="main">
-            <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Responsavel</label>
-                <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Setor</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-12">
-                <label for="inputAddress2" class="form-label">Capacidade</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-6">
-                <label for="inputZip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-            <div class="col-md-5">
-                <label for="inputPassword4" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </div>
-        </form>
-
-
 
         <!-- <nav class="menubar">
             <div class="logo">
@@ -91,40 +56,82 @@
                 </ul>
             </div>
         </nav> -->
-        <aside class="side-bar-layout">
-            <!-- <ul class="menu panel">
-                <li class="control-panel">
-                    <a href="../dashboard/dashboard.html">
-                        <i class='bx bxs-dashboard'></i> Painel de controle
-                    </a>
-                </li>
 
-                <li>
-                    <ul class="menu submenu">
-                        <li class="span-register">
-                            <i class="bx register-button"></i> Cadastrar
-                        </li>
-                        <li class="addCooler-button">
-                            <a href="../register-cooler/register-cooler.html">Registrar</a>
-                        </li>
+        <div class="test">
+            
+
+            <aside class="side-bar-layout">
+                <!-- <ul class="menu panel">
+                    <li class="control-panel">
+                        <a href="../dashboard/dashboard.html">
+                            <i class='bx bxs-dashboard'></i> Painel de controle
+                        </a>
+                    </li>
+    
+                    <li>
+                        <ul class="menu submenu">
+                            <li class="span-register">
+                                <i class="bx register-button"></i> Cadastrar
+                            </li>
+                            <li class="addCooler-button">
+                                <a href="../register-cooler/register-cooler.html">Registrar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul> -->
+
+                <div class="side-bar-list list-group list-group-item-dark">
+                    <a href="../Dashboard/dashboard.html"
+                        class="list-group-item list-group-item-action list-group-item ">Dashboard</a>
+                    <i class="btn list-group-item dropdown-toggle btn-md" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Gerenciamento
+                    </i>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../register-cooler/register-cooler.html">Registrar</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
-                </li>
-            </ul> -->
+                </div>
+            </aside>
 
-            <div class="side-bar-list list-group list-group-item-dark">
-                <a href="../Dashboard/dashboard.html"
-                    class="list-group-item list-group-item-action list-group-item ">Dashboard</a>
-                <i class="btn list-group-item dropdown-toggle btn-md" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Gerenciamento
-                </i>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="../register-cooler/register-cooler.html">Registrar</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+            <div class="sidebar-test">
+                <form class="main row g-3" id="main">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Responsavel</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Setor</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress2" class="form-label">Capacidade</label>
+                        <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputZip" class="form-label">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </form>
             </div>
-        </aside>
+        </div>
 
     </div>
     <script src="./register-cooler.js"></script>
