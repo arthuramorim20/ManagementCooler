@@ -60,9 +60,8 @@
 .main-content {
     flex: 1;
     padding: 25px;
-    background-color: #fff;
     width: calc(200px - 12em);
-    height: 70vh;
+    height: 67vh;
     display: flex;
     justify-self: center;
 

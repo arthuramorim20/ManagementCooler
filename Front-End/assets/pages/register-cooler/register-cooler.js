@@ -1,7 +1,6 @@
 const form = document.querySelector('#main');
 
 form.addEventListener('submit', e => {
-    e.preventDefault()
     fetch('http://localhost:8080/new_user', {
         method: 'POST',
         headers: {
