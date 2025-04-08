@@ -46,9 +46,9 @@
 .main {
     background-color: #02cdad;   
     padding: 25px 25px 25px 25px;
-    width: 50em;
+    width: 135vh;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     
 }
