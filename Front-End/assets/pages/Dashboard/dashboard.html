@@ -4,28 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/global.css">
+    <!-- <link rel="stylesheet" href="../../css/global.css"> -->
     <link rel="stylesheet" href="./register-cooler.css">
     <link rel="stylesheet" href="../../css/style.css">
     <title>CoolerMaster</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <nav class="menubar">
-            <!-- <ul class="button-main">
-                <li>
-                    <h1><a href="../Dashboard/dashboard.html">CoolerMaster</a></h1>
-                </li>
-                <li>
-                    <h1 class="search-cooler"><svg xmlns="http://www.w3.org/2000/svg" height="19" width="17"
-                            viewBox="0 0 512 512">
-                            <path fill="#f2e1c7"
-                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                        </svg></h1>
-                </li> 
-            </ul> -->
+    <div class="container-1">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-3" href="../Dashboard/dashboard.html">CoolerMaster</a>
 
+                <div class="justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="d-flex" role="search">
+                        <button class="btn btn-outline-success" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="" width="17" viewBox="0 0 512 512">
+                                <path fill="#f2e1c7"
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- <nav class="menubar">
             <div class="logo">
                 <a href="../Dashboard/dashboard.html">CoolerMaster</a>
             </div>
@@ -35,10 +47,18 @@
                     <path fill="#f2e1c7"
                         d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
                 </svg>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Ar-condicionados</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <aside class="sidebar">
-            <ul class="menu panel">
+        </nav> -->
+        <aside class="side-bar-layout">
+            <!-- <ul class="menu panel">
                 <li class="control-panel">
                     <a href="../dashboard/dashboard.html">
                         <i class='bx bxs-dashboard'></i> Painel de controle
@@ -55,8 +75,23 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
+
+            <div class="side-bar-list list-group list-group-item-dark">
+                <a href="../Dashboard/dashboard.html"
+                    class="list-group-item list-group-item-action list-group-item ">Dashboard</a>
+                <i class="btn list-group-item dropdown-toggle btn-md" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Gerenciamento
+            </i>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../register-cooler/register-cooler.html">Registrar</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
         </aside>
+
     </div>
     <script src="./register-cooler.js"></script>
 </body>
