@@ -5,7 +5,7 @@ let behaviorBtnSearch = document.createElement('input');
 behaviorBtnSearch.className = searchBtn.className;
 behaviorBtnSearch.style.cssText = searchBtn.style.cssText;
 behaviorBtnSearch.style.textAlign = 'left'
-
+behaviorBtnSearch.style.cursor = `text`
 
 
 /*let elIcon = 
@@ -16,10 +16,14 @@ behaviorBtnSearch.style.textAlign = 'left'
 `
 */
 
-divSearch.addEventListener('click', e => {
+document.addEventListener('click', e => {
     e.preventDefault();
-    
+
     if (e.target.classList.contains('btn')) {
-        searchBtn.replaceWith(behaviorBtnSearch) 
+        searchBtn.replaceWith(behaviorBtnSearch)
     }
-})
+    if (e.target.classList.contains('main')) {
+        behaviorBtnSearch.replaceWith(searchBtn)
+    }
+}
+)
