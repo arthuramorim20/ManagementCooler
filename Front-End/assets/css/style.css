@@ -24,18 +24,15 @@
 .container-1 {
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 68px);
 }
 
 .container-layout {
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 68px);
 }
 
 .navbar {
     background-color: var(--bg-light2);
-
     h1 {
         font-size: 20pt;
     }
@@ -45,10 +42,9 @@
     width: 220px;
     background-color: var(--bg-light);
     padding-top: 20px;
-    height: 100%;
     .side-bar-layout {
         width: 12em;
-        height: calc(100vh - 68px);
+        height: calc(100vh - 94px);
         background-color: var(--bg-light);
 
         .side-bar-list {
@@ -65,8 +61,9 @@
     flex: 1;
     padding: 25px;
     background-color: #fff;
-    width: calc(80% - 12em);
-    height: 73vh;
+    width: calc(200px - 12em);
+    height: 70vh;
     display: flex;
     justify-self: center;
+
 }
