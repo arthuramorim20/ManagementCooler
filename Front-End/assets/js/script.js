@@ -21,7 +21,6 @@ divSearch.addEventListener('click', e => {
     if (e.target.classList.contains('btn')) {
         searchBtn.replaceWith(behaviorBtnSearch)
     }
-    
 }
 )
 
