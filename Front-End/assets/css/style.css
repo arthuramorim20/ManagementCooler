@@ -44,11 +44,12 @@
     width: 170px;
     background-color: var(--bg-light);
     padding-top: 15px;
+    font-weight: 510;
 
     .side-bar-layout {
         width: 10em;
         height: calc(100.3vh - 92px);
-        
+        margin-left: 5.4px;
 
         .side-bar-list {
             padding-left: 10em;
@@ -57,20 +58,20 @@
         }
 
         .dropdownSide {
-            background-color: #E3F2FD;
+            background-color: var(--bg-default);
             width: 100%;
             border-color: var(--clr-none);
+            font-weight: 510;
             .dropdown-item {
-                background-color: #ffff
+                background-color: var(--bg-default);
+                width: 9.7em;
+                font-weight: 510;
             }
         }
 
 
     }
 }
-
-
-
 
 .main-content {
     flex: 1;
