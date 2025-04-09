@@ -1,12 +1,14 @@
+const container1 = document.querySelector('.container-1');
 const divSearch = document.querySelector('.search-div');
 const searchBtn = divSearch.querySelector('.btn');
 const mainContent = document.querySelector('.main-content');
-const divSucess = document.querySelector('.alert-register-sucess')
+const divSucess = document.querySelector('.alert-register-sucess');
 
 
-function iconAlertSucess () {
+
+function iconAlertSucess() {
     let alertSucess =
-`
+        `
 
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check-circle-fill" viewBox="0 0 20 20">
@@ -19,12 +21,15 @@ function iconAlertSucess () {
         <div>
             Cadastrado com sucesso
         </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        
     </div>
 
 `
-divSucess.innerHTML = alertSucess;
+    divSucess.innerHTML = alertSucess;
 
 }
+
 
 let behaviorBtnSearch = document.createElement('input');
 behaviorBtnSearch.className = searchBtn.className;
@@ -41,7 +46,8 @@ divSearch.addEventListener('click', e => {
 }
 )
 
-document.getElementById('main').addEventListener('click', e => {
+
+container1.addEventListener('click', () => {
     behaviorBtnSearch.replaceWith(searchBtn)
 })
 
