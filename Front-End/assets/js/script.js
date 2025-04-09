@@ -6,7 +6,7 @@ const divSucess = document.querySelector('.alert-register-sucess');
 
 
 
-function iconAlertSucess() {
+function iconAlertSucess () {
     let alertSucess =
         `
 
@@ -51,6 +51,9 @@ container1.addEventListener('click', () => {
     behaviorBtnSearch.replaceWith(searchBtn)
 })
 
-mainContent.addEventListener('submit', () => {
-    iconAlertSucess();
+mainContent.addEventListener('click', e => {
+    if (e.target.classList.contains('btn')) {
+        clearTimeout(iconAlertSucess(), 500);
+    }
+    
 })
