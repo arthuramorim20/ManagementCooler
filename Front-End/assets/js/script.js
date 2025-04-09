@@ -3,7 +3,9 @@ const searchBtn = divSearch.querySelector('.btn');
 const mainContent = document.querySelector('.main-content');
 const divSucess = document.querySelector('.alert-register-sucess')
 
-let alertSucess =
+
+function iconAlertSucess () {
+    let alertSucess =
 `
 
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -20,6 +22,9 @@ let alertSucess =
     </div>
 
 `
+divSucess.innerHTML = alertSucess;
+
+}
 
 let behaviorBtnSearch = document.createElement('input');
 behaviorBtnSearch.className = searchBtn.className;
@@ -41,5 +46,5 @@ document.getElementById('main').addEventListener('click', e => {
 })
 
 mainContent.addEventListener('submit', () => {
-    divSucess.innerHTML = alertSucess;
+    iconAlertSucess();
 })

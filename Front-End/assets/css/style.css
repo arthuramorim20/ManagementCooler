@@ -35,11 +35,17 @@
     .alert-register-sucess {
         .alert {
             margin-left: 25px;
-            background-color: #02cdad;
+            padding-right: 5px;
         }
 
         svg {
-            padding: 30px 0 0 20px;
+            height: 25mm;
+            width: 25mm;
+            padding: 27px 0 0 20px;
+        }
+
+        div {
+            width: 27em;
         }
     }
 }
