@@ -19,6 +19,4 @@ form.addEventListener('submit', e => {
             status: estado.value
         })
     })
-
-    console.log('Foi')
 })
