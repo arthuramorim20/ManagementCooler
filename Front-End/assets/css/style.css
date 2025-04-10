@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+@media(max-width:768px) {
+    .container-1 {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
+
 :root {
     --bg-default: #ebebeb;
     --bg-light: #6A8380;
@@ -38,10 +46,10 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 91.9vh;
+    height: 91.8vh;
 
     /** set´s svg alert **/
-    
+
     .alert-register-sucess {
         .alert {
             margin-left: 25px;
