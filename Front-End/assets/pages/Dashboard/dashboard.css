@@ -1,12 +1,12 @@
 .card-cooler {
-    background-color: rgb(35, 117, 117);
     width: 200px;
     height: 200px;
-    justify-content: center;
-    align-content: center;
+    background-color: rgb(35, 117, 117);
 
     .header-card {
+        justify-content: center;
         background-color: blue;
+        width: 100%;
 
     }
 }

@@ -87,6 +87,7 @@ body {
     height: 100%;
 
     .list {
+        background-color: var(--bg-light);
         margin-left: 4px;
 
         a {
