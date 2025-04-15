@@ -3,6 +3,9 @@ import dotenv from 'dotenv';
 import router from './routes/router';
 import createTable from './model/table';
 
+/**
+ * teste
+ */
 const app = express();
 const port = 3000;
 
@@ -12,6 +15,7 @@ app.use(router)
 dotenv.config()
 
 createTable();
+
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
