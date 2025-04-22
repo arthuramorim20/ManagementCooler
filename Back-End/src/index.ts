@@ -3,9 +3,6 @@ import dotenv from 'dotenv';
 import router from './routes/router';
 import createTable from './model/table';
 
-/**
- * teste
- */
 const app = express();
 const port = 3000;
 
