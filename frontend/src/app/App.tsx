@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import { useState, useEffect } from 'react'; 
 import Dashboard from '../pages/dashboard/dashboard.tsx';
 import Login from '../pages/login/login.tsx';
-import "@radix-ui/themes/styles.css";
+
 
 
 function App() {

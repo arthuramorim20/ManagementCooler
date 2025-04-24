@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import { useState, useEffect } from 'react';
 import Login from '../login/login.tsx';
 import * as Toast from '@radix-ui/react-toast';
-import "@radix-ui/themes/styles.css";
+
 
 
 function Dashboard() {
