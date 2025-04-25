@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React from 'react';
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
 
@@ -8,23 +8,13 @@ type FieldType = {
     remember?: string;
 };
 
+
 const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
     console.log('Success:', values);
 };
 
 const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
     console.log('Failed:', errorInfo);
-};
-
-const finishSucess = () => {
-    const usernameInput = document.querySelector('input[name="username"]') as HTMLInputElement;
-    const passwordInput = document.querySelector('input[name="password"]') as HTMLInputElement;
-
-    if (usernameInput?.value === "admin" && passwordInput?.value === "admin") {
-
-        alert('Login successful!')
-
-    }
 };
 
 
@@ -60,7 +50,7 @@ export const App: React.FC = () => (
         </Form.Item>
 
         <Form.Item label={null}>
-            <Button type="primary" htmlType="submit" onClick={() => finishSucess()}>
+            <Button type="primary" htmlType="submit">
                 Submit
             </Button>
         </Form.Item>
