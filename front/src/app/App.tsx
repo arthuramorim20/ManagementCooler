@@ -1,14 +1,15 @@
-import { Theme} from '@radix-ui/themes';
+import { Box, Flex, TabNav } from '@radix-ui/themes';
 import Dashboard from '../pages/dashboard/dashboard';
+import Navbar from '../components/navbar/navbar';
 //import Login from '../pages/login/login.tsx';
 
 function App() {
   return (
     <>
-      <Theme>
+      <Flex direction={"column"} style={{ background: "var(--gray-a2)", borderRadius: "var(--radius-3)" }}>
+        <Navbar />
         <Dashboard />
-      </Theme>
-
+      </Flex>
     </>
   )
 }

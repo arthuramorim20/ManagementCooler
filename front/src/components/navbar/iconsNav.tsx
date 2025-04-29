@@ -3,7 +3,7 @@ import { Flex, Box } from "@radix-ui/themes";
 
 export const NavbarIcons = () => {
     return (
-        <Flex  justify="between" align="center">
+        <Flex gap="4">
             <Box width="64px" height="64px">
                 <span>Icon</span>
             </Box>
