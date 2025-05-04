@@ -6,7 +6,7 @@ services:
     container_name: postgres_container
     restart: unless-stopped
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_USER: main
       POSTGRES_PASSWORD: Rwjnz6mV
       POSTGRES_DB: zurra
     ports:
