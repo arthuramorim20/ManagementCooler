@@ -6,7 +6,7 @@ dotenv.config()
 const { Client } = pg;
 
 const client = new Client({
-    database: process.env.DB_NAME,
+    database: process.env.DB_NAME || "zurra",
     host: process.env.DB_HOST,
     password: process.env.DB_PASSWORD,
     port: Number(process.env.DB_PORT),

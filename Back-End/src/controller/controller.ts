@@ -30,7 +30,7 @@ const postUser = async (req: Request, res: Response) => {
 const updateUser = async (req: Request, res: Response) => {
     try {
         const message = { "accept": "Atualizado com sucesso" };
-        const { id, ...fieldsToUpdate } = req.body;
+        const { id, ...fieldsToUpdate } = req.body; //Rest 
 
         const updates = Object.keys(fieldsToUpdate)
             .map((key, index) => `${key} = $${index + 2}`)
@@ -48,9 +48,27 @@ const updateUser = async (req: Request, res: Response) => {
     }
 };
 
+const deleteUser = async (req: Request, res: Response) => {
+    try {
+        const message = { "accept": "Apagado" };
+        const { id }:any = req.body;
+
+        const query = `DELETE FROM arconds WHERE id = $1;`
+
+        await client.query(query, [id]);
+
+        res.json(message)
+    } catch (err) {
+        const message = { "error": "Erro ao tentar deletar users" };
+        console.error(err);
+        res.json(message);
+    }
+}
+
 
 export {
     getUser,
     postUser,
-    updateUser
+    updateUser,
+    deleteUser
 };
