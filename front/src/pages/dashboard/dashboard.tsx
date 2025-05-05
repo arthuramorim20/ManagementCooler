@@ -5,7 +5,7 @@ export default function Dashboard() {
     return (
         <>
             <Container size="4">
-                <h1>teste</h1>
+                <h1>tesste</h1>
             </Container>
         </>
     );

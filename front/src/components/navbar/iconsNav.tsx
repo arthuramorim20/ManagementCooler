@@ -5,7 +5,7 @@ export const NavbarIcons = () => {
     return (
         <Flex gap="4">
             <Box width="64px" height="64px">
-                <span>Icon</span>
+                <span>Icson</span>
             </Box>
         </Flex>
     )

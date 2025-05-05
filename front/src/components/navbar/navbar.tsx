@@ -12,7 +12,7 @@ function Navbar() {
 
             <TabNav.Root justify={"center"}>
                 <TabNav.Link href="#" active>
-                    Account
+                    Accountsss
                 </TabNav.Link>
                 <TabNav.Link href="#">Documents</TabNav.Link>
                 <TabNav.Link href="#">Settings</TabNav.Link>
