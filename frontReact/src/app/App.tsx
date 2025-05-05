@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <Flex direction={"column"} style={{ background: "var(--gray-a2)", borderRadius: "var(--radius-3)" }}>
+        <h1>Login</h1>
         <Login />
       </Flex>
     </>

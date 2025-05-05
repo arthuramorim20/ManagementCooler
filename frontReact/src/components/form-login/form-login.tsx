@@ -1,7 +1,7 @@
-import * as React from "react";
+// import * as React from "react";
 import { Form } from "radix-ui";
 
-
+//Separar inputs de buttons
 const FormDemo = () => (
     <Form.Root className="FormRoot">
         <Form.Field className="FormField" name="email">
@@ -24,7 +24,7 @@ const FormDemo = () => (
                 <input className="Input" type="email" required />
             </Form.Control>
         </Form.Field>
-        <Form.Field className="FormField" name="question">
+        <Form.Field className="input" name="password">
             <div
                 style={{
                     display: "flex",
@@ -32,7 +32,7 @@ const FormDemo = () => (
                     justifyContent: "space-between",
                 }}
             >
-                <Form.Label className="FormLabel">Question</Form.Label>
+                <Form.Label className="FormLabel">Password</Form.Label>
                 <Form.Message className="FormMessage" match="valueMissing">
                     Please enter a question
                 </Form.Message>

@@ -18,10 +18,13 @@ button {
 }
 
 .FormRoot {
+  margin: auto, auto, auto, auto;
 	width: 260px;
+  background-color: brown;
 }
 
 .FormField {
+  background-color: rgb(44, 19, 19);
 	display: grid;
 	margin-bottom: 10px;
 }
