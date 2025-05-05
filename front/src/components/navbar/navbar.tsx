@@ -10,14 +10,13 @@ function Navbar() {
             {/* <NavbarIcons></NavbarIcons>
             <Box /> */}
 
-            <TabNav.Root justify={"center"} size={"2"}>
-                    <TabNav.Link href="#" active>
-                        Account
-                    </TabNav.Link>
-                    <TabNav.Link href="#">Documents</TabNav.Link>
-                    <TabNav.Link href="#">Settings</TabNav.Link>
+            <TabNav.Root justify={"center"}>
+                <TabNav.Link href="#" active>
+                    Account
+                </TabNav.Link>
+                <TabNav.Link href="#">Documents</TabNav.Link>
+                <TabNav.Link href="#">Settings</TabNav.Link>
             </TabNav.Root>
-
         </Box>
     )
 }

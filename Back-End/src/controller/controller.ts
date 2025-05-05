@@ -18,7 +18,7 @@ const postUser = async (req: Request, res: Response) => {
         const { responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status } = req.body; // Destructure the body
         await client.query(
             'INSERT INTO arconds (responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
-            [responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status] // Pass individual values
+            [responsavel, setor, marca, capacidade, gas, servicos, tecnico, proxmanutencao, status]
         );
         res.json(message);
     } catch (err) {
@@ -33,8 +33,10 @@ const updateUser = async (req: Request, res: Response) => {
         const { id, ...fieldsToUpdate } = req.body;
 
         const updates = Object.keys(fieldsToUpdate)
-            .map((key, index) => `${key} = $${index + 2}`)
-            .join(", ");
+        .map((key, index) => `${key} = $${index + 2}`)
+        .join(", ");
+
+        
         const values = [id, ...Object.values(fieldsToUpdate)];
 
         const query = `UPDATE arconds SET ${updates} WHERE id = $1`;
@@ -48,9 +50,23 @@ const updateUser = async (req: Request, res: Response) => {
     }
 };
 
+const deleteUser = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.body;
+        const query = 'DELETE FROM arconds WHERE id = $1';
+        await client.query(query, [id]);
+        res.json("Foi");
+    } catch (err) {
+        const message = { "error": "Erro ao tentar obter users" }
+        res.json(message)
+        console.error(err);
+    }
+}
+
 
 export {
     getUser,
     postUser,
-    updateUser
+    updateUser,
+    deleteUser
 };
