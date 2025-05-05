@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import router from './routes/router';
-import createTable from './model/table';
+import { createTable, createTableUser } from './model/table';
 
 const app = express();
 const port = 3000;
@@ -12,6 +12,7 @@ app.use(router);
 dotenv.config();
 
 createTable();
+createTableUser();
 
 
 app.listen(port, () => {
