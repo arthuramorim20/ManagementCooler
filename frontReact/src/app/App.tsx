@@ -1,6 +1,6 @@
 import { Flex } from '@radix-ui/themes';
-import Dashboard from '../pages/dashboard/dashboard';
-import Navbar from '../components/navbar/navbar';
+// import Dashboard from '../pages/dashboard/dashboard';
+// import Navbar from '../components/navbar/navbar';
 import Login from '../pages/login/login.tsx';
 
 function App() {
