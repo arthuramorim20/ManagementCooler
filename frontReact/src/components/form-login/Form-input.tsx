@@ -1,8 +1,9 @@
 // import * as React from "react";
 import { Form } from "radix-ui";
+import FormButtons from "./form-buttons";
 
 //Separar inputs de buttons
-const FormDemo = () => (
+const FormInput = () => (
     <Form.Root className="FormRoot">
         <Form.Field className="FormField" name="email">
             <div
@@ -38,15 +39,11 @@ const FormDemo = () => (
                 </Form.Message>
             </div>
             <Form.Control asChild>
-                <textarea className="Textarea" required />
+                <input className="Textarea" type="password" required />
             </Form.Control>
+            <FormButtons />
         </Form.Field>
-        <Form.Submit asChild>
-            <button className="Button" style={{ marginTop: 10 }}>
-                Post question
-            </button>
-        </Form.Submit>
     </Form.Root>
 );
 
-export default FormDemo;
+export default FormInput;
