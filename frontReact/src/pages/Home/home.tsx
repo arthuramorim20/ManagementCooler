@@ -5,10 +5,10 @@ import Navbar from '../../components/navbar/navbar';
 export default function Home() {
     return (
         <>
-            <Container size="4" style={{backgroundColor: "#207E73"}}>
+            <Container size="4" style={{backgroundColor: "#0090FF"}}>
                 <Navbar />
             </Container>
-                <h1>tesste</h1>
+                <h1>teste</h1>
         </>
     );
 };

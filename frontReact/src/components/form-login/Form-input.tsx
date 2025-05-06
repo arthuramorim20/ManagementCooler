@@ -1,6 +1,6 @@
 // import * as React from "react";
 import { Form } from "radix-ui";
-import FormButtons from "./form-buttons";
+import FormButtons from "./Form-buttons";
 
 //Separar inputs de buttons
 const FormInput = () => (

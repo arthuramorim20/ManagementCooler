@@ -5,11 +5,7 @@ import { Flex, TabNav } from "@radix-ui/themes";
 
 function Navbar() {
     return (
-
-        <Flex justify={'center'} style={{ background: "#207E73" }}>
-            {/* <NavbarIcons></NavbarIcons>
-            <Box /> */}
-
+        <Flex justify={'center'} style={{ background: '#0090FF' }}>
             <TabNav.Root justify={"center"}>
                 <TabNav.Link href="#" active>
                     Accountsss
