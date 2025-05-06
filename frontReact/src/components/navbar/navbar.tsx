@@ -1,5 +1,5 @@
 import { Flex, TabNav } from "@radix-ui/themes";
-//import { NavbarIcons } from './iconsNav.tsx';
+import ButtonsNav from "./buttonsNav.tsx";
 
 //import React from "react"
 
@@ -7,11 +7,7 @@ function Navbar() {
     return (
         <Flex justify={'center'} style={{ background: '#0090FF' }}>
             <TabNav.Root justify={"center"}>
-                <TabNav.Link href="#" active>
-                    Accountsss
-                </TabNav.Link>
-                <TabNav.Link href="#">Documents</TabNav.Link>
-                <TabNav.Link href="#">Settings</TabNav.Link>
+                <ButtonsNav />
             </TabNav.Root>
         </Flex>
     )
