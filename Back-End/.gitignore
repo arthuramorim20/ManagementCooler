@@ -3,10 +3,39 @@ node_modules/
 
 # Ignore environment files
 .env
+.env.local
+.env.*.local
 
-# Ignore all JSON files
-*.json
-
+# Ignore build output
 dist/
+build/
 
-docker-compose.yml/
+# Ignore logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore Docker-related files
+docker-compose.yml
+Dockerfile
+
+# Ignore coverage reports
+coverage/
+
+# Ignore all JSON files (if necessary, remove this if you need to track specific JSON files)
+*.json

@@ -1,14 +1,17 @@
-import { Container } from '@radix-ui/themes';
+import { Box, Container } from '@radix-ui/themes';
 import Navbar from '../../components/navbar/navbar';
+import Sidebar from '../../components/sidebar/sidebar'
 //import Navbar from '../../components/navbar/navbar.tsx';
 
 export default function Home() {
     return (
         <>
-            <Container size="4" style={{backgroundColor: "#0090FF"}}>
+            <Container style={{backgroundColor: "#0090FF"}}>
                 <Navbar />
-            </Container>
-                <h1>teste</h1>
+            </Container>     
+            <Box as='div'>
+                <Sidebar />    
+            </Box>      
         </>
     );
 };

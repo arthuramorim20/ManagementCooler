@@ -5,6 +5,7 @@ import FormButtons from "./Form-buttons";
 //Separar inputs de buttons
 const FormInput = () => (
     <Form.Root className="FormRoot">
+        <h1 style={{ display: "flex", justifyContent: "center" }}>Login</h1>
         <Form.Field className="FormField" name="email">
             <div
                 style={{
@@ -15,10 +16,10 @@ const FormInput = () => (
             >
                 <Form.Label className="FormLabel">Email</Form.Label>
                 <Form.Message className="FormMessage" match="valueMissing">
-                    Please enter your email
+                    Por favor insira o email
                 </Form.Message>
                 <Form.Message className="FormMessage" match="typeMismatch">
-                    Please provide a valid email
+                    Email Inválido
                 </Form.Message>
             </div>
             <Form.Control asChild>
@@ -35,7 +36,7 @@ const FormInput = () => (
             >
                 <Form.Label className="FormLabel">Password</Form.Label>
                 <Form.Message className="FormMessage" match="valueMissing">
-                    Please enter a question
+                    Por favor insira a senha
                 </Form.Message>
             </div>
             <Form.Control asChild>
@@ -43,6 +44,7 @@ const FormInput = () => (
             </Form.Control>
             <FormButtons />
         </Form.Field>
+        <a href="" >Esqueci a Senha</a>
     </Form.Root>
 );
 
