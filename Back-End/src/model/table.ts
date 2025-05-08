@@ -20,7 +20,6 @@ async function createTable() {
     );
     `
     try {
-        // await client.query(typeEnum);
         await client.query(extension);
         await client.query(table);
         console.log('Created!!');
@@ -31,7 +30,7 @@ async function createTable() {
 
 async function createTableUser() {
     
-    const typeEnum = `CREATE TYPE user_role_enum AS ENUM ('admin', 'user');`
+    const typeEnum = `CREATE TYPE IF NOT EXISTS user_role_enum AS ENUM ('admin', 'user');`
 
     const extension = `CREATE EXTENSION IF NOT EXISTS "pgcrypto";`
 
