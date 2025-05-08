@@ -1,6 +1,4 @@
-import pg, { Client } from 'pg';
 import client from '../config/connection';
-
     
 async function createTable() {
     const extension = `CREATE EXTENSION IF NOT EXISTS "pgcrypto";`
@@ -8,14 +6,14 @@ async function createTable() {
     const table = `
     CREATE TABLE IF NOT EXISTS arConds (
         id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-        responsavel VARCHAR(255) not null,
-	    setor varchar(255) not null,
-	    marca varchar(255) not null,
-	    capacidade varchar(255) not null,
-	    gas varchar(255) not null,
-	    servicos varchar(255) not null,
-	    tecnico varchar(255) not null,
-	    proxmanutencao varchar(255) not null,
+        responsible VARCHAR(255) not null,
+	    sector varchar(255) not null,
+	    brand varchar(255) not null,
+	    capacity varchar(255) not null,
+	    gas_type varchar(255) not null,
+	    services_type varchar(255) not null,
+	    technical varchar(255) not null,
+	    nextmaintenance varchar(255) not null,
 	    status varchar(255) not null
     );
     `
@@ -30,7 +28,10 @@ async function createTable() {
 
 async function createTableUser() {
     
+<<<<<<< HEAD
     const typeEnum = `CREATE TYPE IF NOT EXISTS user_role_enum AS ENUM ('admin', 'user');`
+=======
+>>>>>>> 75de821e9d3b82574723f1fe6657601d990ceacd
 
     const extension = `CREATE EXTENSION IF NOT EXISTS "pgcrypto";`
 
@@ -45,7 +46,6 @@ async function createTableUser() {
     );
     `
     try {
-        await client.query(typeEnum);
         await client.query(extension);
         await client.query(table);
         console.log('Created table');

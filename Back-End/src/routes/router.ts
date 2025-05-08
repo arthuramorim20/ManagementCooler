@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { getCoolers, postCoolers, updateCoolers, deleteCoolers } from '../controller/controller';
-import { getUser ,postUser, updateUser, deleteUser } from '../controller/controllerUser'
+import { getUser ,postUser, updateUser, deleteUser } from '../controller/controllerUser';
 
 const router = Router();
 
