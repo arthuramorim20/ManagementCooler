@@ -1,4 +1,3 @@
-import pg, { Client } from 'pg';
 import client from '../config/connection';
     
 async function createTable() {

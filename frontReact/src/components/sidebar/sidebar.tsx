@@ -5,7 +5,8 @@ import { TabNav } from "@radix-ui/themes";
 export default function Sidebar() {
     return (
         <TabNav.Root className="sidebar">
-            <h1>Dashboard</h1>
+
+            <h1 className="sidebar-title" >Dashboard</h1>
             <TabNav.Link>
                 <a href="#" className="sidebar-link">Home</a>
             </TabNav.Link>
