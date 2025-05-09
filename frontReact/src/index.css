@@ -1,9 +1,8 @@
 * {
 	margin: 0;
 	padding: 0;
-	
-}
 
+}
 
 
 input,
@@ -103,44 +102,36 @@ button {
 }
 
 /** Sidebar **/
-/* 
+
 .sidebar {
-	background-color: aquamarine;
-	height: 100%;
-	width: 130px;
-	
-	background-color: #1f2937;
-	
-	color: white;
+	width: 250px;
+	height: 100vh;
+	background-color: #1e1e2f;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.menu-list {
 	display: flex;
 	flex-direction: column;
-	
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-.sidebar-title {
-	margin-top: 1.5rem;
-	font-size: 1.5rem;
-	font-weight: bold;
-	margin-bottom: 1.5rem;
-}
-
-.sidebar-list {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
-
-.sidebar-link {
-	color: white;
+.menu-link {
+	display: block;
+	padding: 10px 15px;
 	text-decoration: none;
-	transition: color 0.3s ease;
+	color: white;
+	border-radius: 4px;
+	transition: background-color 0.2s ease;
 }
 
-.sidebar-link:hover {
-	color: #60a5fa;
-	
-} 
-*/
+.menu-link:hover {
+	background-color: #2d2d44;
+}
 
 /* CSS (adicione no seu arquivo .css ou como style tag) */
 
@@ -166,22 +157,6 @@ button {
 	font-size: 20px;
 }
 
-.sidebar {
-	grid-area: sidebar;
-	background: #f3f4f6;
-	padding: 20px;
-}
-
-.sidebar ul {
-	list-style: none;
-	padding: 0;
-}
-
-.sidebar li {
-	margin-bottom: 10px;
-	cursor: pointer;
-	font-weight: 500;
-}
 
 .dashboard {
 	grid-area: dashboard;
@@ -287,4 +262,105 @@ button {
 .tabs-trigger[data-state="active"] {
 	background-color: #3b82f6;
 	color: white;
+}
+
+/** Register cooler **/
+
+.maintenance-form {
+	background: white;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+	width: 70%;
+	margin: auto;
+}
+
+.maintenance-form h2 {
+	margin-bottom: 30px;
+	font-size: 1.5rem;
+	color: #333;
+}
+
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 24px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group label {
+	font-size: 0.95rem;
+	margin-bottom: 6px;
+	color: #444;
+}
+
+.form-group input,
+.form-group select {
+	padding: 10px 12px;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	background: #fafafa;
+}
+
+.full-width {
+	grid-column: span 2;
+}
+
+.form-footer {
+	margin-top: 30px;
+	text-align: right;
+}
+
+button {
+	background: #2d89ef;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 12px 20px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #2267c6;
+}
+
+/** Toaster **/
+.toast-root {
+	background: #2d89ef;
+	color: white;
+	padding: 16px 20px;
+	border-radius: 6px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	font-weight: 500;
+}
+
+.toast-title {
+	font-size: 1rem;
+}
+
+.toast-viewport {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  /* evita ocupar espaço no DOM flow */
+  pointer-events: none;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+}
+
+.form-wrapper {
+  max-width: 1000px;
+  width: 100%;
 }

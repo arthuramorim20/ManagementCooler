@@ -1,29 +1,25 @@
 // import { Box, Container } from '@radix-ui/themes';
 // import Navbar from '../../components/navbar/navbar';
-// import Sidebar from '../../components/sidebar/sidebar'
-//import Navbar from '../../components/navbar/navbar.tsx';
-import { useState } from 'react';
-import * as Slider from '@radix-ui/react-slider';
-import * as Switch from '@radix-ui/react-switch';
-import * as Tabs from '@radix-ui/react-tabs';
+import Sidebar from '../../components/sidebar/sidebar';
+import MaintenanceForm from '../../components/register-cooler/register';
+// import Navbar from '../../components/navbar/navbar.tsx';
+// import { useState } from 'react';
+// import * as Slider from '@radix-ui/react-slider';
+// import * as Switch from '@radix-ui/react-switch';
+// import * as Tabs from '@radix-ui/react-tabs';
 
 export default function Home() {
-    const [temperature, setTemperature] = useState(22);
-    const [isACOn, setIsACOn] = useState(true);
-    const [mode, setMode] = useState('cool');
+    // const [temperature, setTemperature] = useState(22);
+    // const [isACOn, setIsACOn] = useState(true);
+    // const [mode, setMode] = useState('cool');
 
     return (
         <div className="layout">
             <nav className="navbar">Admin</nav>
-            <aside className="sidebar">
-                <ul>
-                    <li>Dashboard</li>
-                    <li>Histórico</li>
-                    <li>Configurações</li>
-                </ul>
-            </aside>
+            <Sidebar></Sidebar>
             <main className="dashboard">
-                {/* Temperature Control */}
+                <MaintenanceForm />
+                {/* Temperature Control
                 <div className="card">
                     <h2>Temperatura</h2>
                     <div className="temperature-display">{temperature}°C</div>
@@ -42,7 +38,7 @@ export default function Home() {
                     </Slider.Root>
                 </div>
 
-                {/* AC Power Switch */}
+                
                 <div className="card">
                     <h2>Ar-condicionado</h2>
                     <Switch.Root
@@ -55,7 +51,7 @@ export default function Home() {
                     <div className="switch-status">{isACOn ? 'Ligado' : 'Desligado'}</div>
                 </div>
 
-                {/* Mode Selector */}
+                
                 <div className="card">
                     <h2>Modo de Operação</h2>
                     <Tabs.Root className="tabs-root" value={mode} onValueChange={setMode}>
@@ -65,7 +61,9 @@ export default function Home() {
                             <Tabs.Trigger className="tabs-trigger" value="auto">Automático</Tabs.Trigger>
                         </Tabs.List>
                     </Tabs.Root>
-                </div>
+                </div> */}
+
+                
             </main>
         </div>
     );

@@ -1,24 +1,24 @@
-// import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import { TabNav } from "@radix-ui/themes";
-// import { Link } from 'react-router'; // or use Next.js's <Link>
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 
-export default function Sidebar() {
-    return (
-        <TabNav.Root className="sidebar">
+const Sidebar = () => {
+  return (
+    <NavigationMenu.Root className="sidebar">
+      <NavigationMenu.List className="menu-list">
+        <NavigationMenu.Item>
+          <NavigationMenu.Link href="#" className="menu-link">Dashboard</NavigationMenu.Link>
+        </NavigationMenu.Item>
+        <NavigationMenu.Item>
+          <NavigationMenu.Link href="#" className="menu-link">Settings</NavigationMenu.Link>
+        </NavigationMenu.Item>
+        <NavigationMenu.Item>
+          <NavigationMenu.Link href="#" className="menu-link">Profile</NavigationMenu.Link>
+        </NavigationMenu.Item>
+        <NavigationMenu.Item>
+          <NavigationMenu.Link href="#" className="menu-link">Logout</NavigationMenu.Link>
+        </NavigationMenu.Item>
+      </NavigationMenu.List>
+    </NavigationMenu.Root>
+  );
+};
 
-            <h1 className="sidebar-title" >Dashboard</h1>
-            <TabNav.Link>
-                <a href="#" className="sidebar-link">Home</a>
-            </TabNav.Link>
-            <TabNav.Link>
-                <a href="#" className="sidebar-link">Equipamentos</a>
-            </TabNav.Link>
-            <TabNav.Link>
-                <a href="#" className="sidebar-link">Manutenção</a>
-            </TabNav.Link>
-            <TabNav.Link>
-                <a href="#" className="sidebar-link">Configurações</a>
-            </TabNav.Link>
-        </TabNav.Root>
-    );
-}
+export default Sidebar;
