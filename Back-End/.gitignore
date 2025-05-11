@@ -39,3 +39,7 @@ coverage/
 
 # Ignore all JSON files (if necessary, remove this if you need to track specific JSON files)
 *.json
+
+supabase/
+
+*.sql

@@ -1,23 +1,18 @@
 import dotenv from 'dotenv';
-import pg from 'pg';
+import { createClient } from '@supabase/supabase-js';
 
 dotenv.config()
 
-const { Client } = pg;
+const supabaseURI:string = process.env.supabaseUrl as string; 
+const supbaseKey:string = process.env.supbaseKey as string;
 
-const client = new Client({
-    database: process.env.DB_NAME || "zurra",
-    host: process.env.DB_HOST,
-    password: process.env.DB_PASSWORD,
-    port: Number(process.env.DB_PORT),
-    user: process.env.DB_USER
-});
-
-
-client.connect()
-    .then(() => console.log('connected database'))
-    .catch((err) => console.error('failed', err))
+export const supabase = createClient(
+    supabaseURI,
+    supbaseKey || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhtZXRnd3N0Y3Jvc21hcG94dnZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY4ODc1NTYsImV4cCI6MjA2MjQ2MzU1Nn0.gEsAqEwpnXW8inzuB3WjhOMPqNjrrIUUd_wBMS8zp34'
+);
 
 
 
-export default client;
+
+
+    
