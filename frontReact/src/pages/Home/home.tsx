@@ -11,17 +11,13 @@ import ArcondicionadosList from '../../components/cards-ar/cards';
 // import * as Tabs from '@radix-ui/react-tabs';
 
 export default function Home() {
-    // const [temperature, setTemperature] = useState(22);
-    // const [isACOn, setIsACOn] = useState(true);
-    // const [mode, setMode] = useState('cool');
-
     return (
         <div className="layout">
             <nav className="navbar">Admin</nav>
             <Sidebar></Sidebar>
             <main className="dashboard">
                 <ArcondicionadosList />
-                
+
             </main>
         </div>
     );
