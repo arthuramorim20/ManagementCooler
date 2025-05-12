@@ -3,6 +3,7 @@
 import Sidebar from '../../components/sidebar/sidebar';
 // import MaintenanceForm from '../../components/register-cooler/register';
 import ArcondicionadosList from '../../components/cards-ar/cards';
+//import AuthDialog from '../../components/form-login/Form-input';
 // import Navbar from '../../components/navbar/navbar.tsx';
 // import { useState } from 'react';
 // import * as Slider from '@radix-ui/react-slider';
@@ -20,50 +21,6 @@ export default function Home() {
             <Sidebar></Sidebar>
             <main className="dashboard">
                 <ArcondicionadosList />
-                {/* Temperature Control
-                <div className="card">
-                    <h2>Temperatura</h2>
-                    <div className="temperature-display">{temperature}°C</div>
-                    <Slider.Root
-                        className="slider"
-                        defaultValue={[temperature]}
-                        min={16}
-                        max={30}
-                        step={1}
-                        onValueChange={([val]) => setTemperature(val)}
-                    >
-                        <Slider.Track className="slider-track">
-                            <Slider.Range className="slider-range" />
-                        </Slider.Track>
-                        <Slider.Thumb className="slider-thumb" />
-                    </Slider.Root>
-                </div>
-
-                
-                <div className="card">
-                    <h2>Ar-condicionado</h2>
-                    <Switch.Root
-                        className="switch-root"
-                        checked={isACOn}
-                        onCheckedChange={setIsACOn}
-                    >
-                        <Switch.Thumb className="switch-thumb" />
-                    </Switch.Root>
-                    <div className="switch-status">{isACOn ? 'Ligado' : 'Desligado'}</div>
-                </div>
-
-                
-                <div className="card">
-                    <h2>Modo de Operação</h2>
-                    <Tabs.Root className="tabs-root" value={mode} onValueChange={setMode}>
-                        <Tabs.List className="tabs-list">
-                            <Tabs.Trigger className="tabs-trigger" value="cool">Frio</Tabs.Trigger>
-                            <Tabs.Trigger className="tabs-trigger" value="heat">Quente</Tabs.Trigger>
-                            <Tabs.Trigger className="tabs-trigger" value="auto">Automático</Tabs.Trigger>
-                        </Tabs.List>
-                    </Tabs.Root>
-                </div> */}
-
                 
             </main>
         </div>
