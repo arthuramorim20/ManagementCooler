@@ -1,7 +1,8 @@
 // import { Box, Container } from '@radix-ui/themes';
 // import Navbar from '../../components/navbar/navbar';
 import Sidebar from '../../components/sidebar/sidebar';
-import MaintenanceForm from '../../components/register-cooler/register';
+// import MaintenanceForm from '../../components/register-cooler/register';
+import ArcondicionadosList from '../../components/cards-ar/cards';
 // import Navbar from '../../components/navbar/navbar.tsx';
 // import { useState } from 'react';
 // import * as Slider from '@radix-ui/react-slider';
@@ -18,7 +19,7 @@ export default function Home() {
             <nav className="navbar">Admin</nav>
             <Sidebar></Sidebar>
             <main className="dashboard">
-                <MaintenanceForm />
+                <ArcondicionadosList />
                 {/* Temperature Control
                 <div className="card">
                     <h2>Temperatura</h2>

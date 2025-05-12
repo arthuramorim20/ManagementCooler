@@ -28,12 +28,6 @@ const MaintenanceForm = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    // const handleSubmit = (e: React.FormEvent) => {
-    //     e.preventDefault();
-    //     console.log('Form Data:', formData);
-    //     // Aqui você pode enviar os dados para a API ou tratá-los como necessário
-    // };
-
     return (
         <div className="page-container">
             <div className='form-wrapper'>

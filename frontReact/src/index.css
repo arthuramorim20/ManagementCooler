@@ -345,22 +345,169 @@ button:hover {
 }
 
 .toast-viewport {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-  /* evita ocupar espaço no DOM flow */
-  pointer-events: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 9999;
+	/* evita ocupar espaço no DOM flow */
+	pointer-events: none;
 }
 
 .page-container {
-  display: flex;
-  justify-content: center;
-  padding: 40px;
-  position: relative;
+	display: flex;
+	justify-content: center;
+	padding: 40px;
+	position: relative;
 }
 
 .form-wrapper {
-  max-width: 1000px;
-  width: 100%;
+	max-width: 1000px;
+	width: 100%;
+}
+
+/** cards **/
+
+.container {
+	padding: 2rem;
+	font-family: Arial, sans-serif;
+}
+
+.title {
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 1.5rem;
+}
+
+.card {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 1rem;
+	background: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
+}
+
+.card:hover {
+	transform: translateY(-4px);
+}
+
+.actions {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+.edit-button,
+.delete-button {
+	border: none;
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.edit-button {
+	background-color: #007bff;
+	color: white;
+}
+
+.delete-button {
+	background-color: #dc3545;
+	color: white;
+}
+
+.dialog-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	inset: 0;
+}
+
+.dialog-content {
+	background: white;
+	padding: 2rem;
+	border-radius: 8px;
+	max-width: 400px;
+	margin: auto;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.save-button {
+	background-color: green;
+	color: white;
+	border: none;
+	padding: 8px;
+	border-radius: 4px;
+}
+
+.close-button {
+	margin-top: 1rem;
+}
+
+.modal-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal {
+	background: white;
+	padding: 2rem;
+	border-radius: 8px;
+	width: 300px;
+	text-align: center;
+}
+
+.modal-buttons {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.confirm-button {
+	background-color: #28a745;
+	color: white;
+	padding: 6px 12px;
+	border: none;
+	border-radius: 4px;
+}
+
+.cancel-button {
+	background-color: #6c757d;
+	color: white;
+	padding: 6px 12px;
+	border: none;
+	border-radius: 4px;
+}
+
+.refresh-button {
+	background-color: #17a2b8;
+	color: white;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 4px;
+	margin-bottom: 1rem;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+	background-color: #138496;
 }
