@@ -1,16 +1,30 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { supabase } from "../../lib/supabaseClient";
+
 import { Flex, TextField, TabNav } from "@radix-ui/themes";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import * as Avatar from "@radix-ui/react-avatar";
 import { FiLogOut } from "react-icons/fi";
 
-
 export default function Navbar() {
-    const userName = "João Silva"; // Substituir pelo nome vindo do Supabase
+    const [userName, setUserName] = useState<string>("Usuário");
+    const navigate = useNavigate();
 
-    const handleLogout = () => {
-        // lógica de logout (ex: supabase.auth.signOut())
-        console.log("Usuário deslogado");
+    useEffect(() => {
+        const fetchUser = async () => {
+            const { data } = await supabase.auth.getUser();
+            if (data?.user) {
+                setUserName(data.user.user_metadata?.name || data.user.email || "Usuário");
+            }
+        };
+        fetchUser();
+    }, []);
+
+    const handleLogout = async () => {
+        await supabase.auth.signOut();
+        navigate("/login"); // ou "/"
     };
 
     return (
@@ -23,7 +37,7 @@ export default function Navbar() {
         >
             {/* Navegação */}
             <TabNav.Root>
-                <h1>Admin</h1>
+                <h1 style={{ color: "#fff" }}>Admin</h1>
             </TabNav.Root>
 
             {/* Campo de busca */}
@@ -37,10 +51,10 @@ export default function Navbar() {
             {/* Menu de usuário */}
             <DropdownMenu.Root>
                 <DropdownMenu.Trigger asChild>
-                    <Flex align="center" gap="2" className="user-info" style={{ cursor: 'pointer' }}>
+                    <Flex align="center" gap="2" className="user-info" style={{ cursor: "pointer" }}>
                         <Avatar.Root className="avatar-root">
                             <Avatar.Fallback className="avatar-fallback">
-                                {userName.charAt(0)}
+                                {userName.charAt(0).toUpperCase()}
                             </Avatar.Fallback>
                         </Avatar.Root>
                         <span>{userName}</span>

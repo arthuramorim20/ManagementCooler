@@ -7,6 +7,7 @@ import { ArcondicionadoForm } from '../components/forms/ArcondicionadoForm'
 import { ConfirmDeleteModal } from '../components/modal/ConfirmModal'
 import Navbar from '../components/navbar/navbar'
 
+
 export interface Arcondicionado {
     id: string
     responsible: string

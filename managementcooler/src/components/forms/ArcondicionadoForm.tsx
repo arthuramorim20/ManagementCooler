@@ -28,7 +28,7 @@ export function ArcondicionadoForm({ data, onChange, onSubmit, mode }: Props) {
                     key={field}
                     value={data[field as keyof Arcondicionado]}
                     onChange={(e) => onChange(field as keyof Arcondicionado, e.target.value)}
-                    placeholder={field[0].toUpperCase() + field.slice(1).replace('_', ' ')}
+                    placeholder={['Responsável', 'Setor', 'Marca', 'Capacidade', 'Tipo de Gás', 'Serviço', 'Técnico', 'Próxima Manutenção', 'Status'][['responsible', 'sector', 'brand', 'capacity', 'gas_type', 'services_type', 'technical', 'nextmaintenance', 'status'].indexOf(field)]}
                 />
             ))}
             <button type="submit" className="save-button">
