@@ -35,14 +35,14 @@ const Login = () => {
                 <Form.Field name="email" className="form-field-2">
                     <Form.Label>Email</Form.Label>
                     <Form.Control asChild>
-                        <input type="email" name="email" className="input-2" required />
+                        <input type="email" name="email" className="input-2" required value={"aer47186@gmail.com"}/>
                     </Form.Control>
                 </Form.Field>
 
                 <Form.Field name="password" className="form-field-2">
                     <Form.Label>Senha</Form.Label>
                     <Form.Control asChild>
-                        <input type="password" name="password" className="input-2" required />
+                        <input type="password" name="password" className="input-2" required value={"Rwjnz6mV"} />
                     </Form.Control>
                 </Form.Field>
 

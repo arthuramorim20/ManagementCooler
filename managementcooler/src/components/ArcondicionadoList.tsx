@@ -92,9 +92,10 @@ export default function ArcondicionadosList() {
 
     return (
         <>
-        <Navbar></Navbar>
+            <Navbar></Navbar>
             <div className="container">
                 <h2 className="title">Ar-condicionados Cadastrados</h2>
+            
 
                 {/* Criar novo */}
                 <Dialog.Root>

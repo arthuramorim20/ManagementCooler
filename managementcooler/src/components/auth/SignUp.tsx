@@ -24,7 +24,7 @@ const Signup = () => {
             setMessage(error.message);
         } else {
             setMessage('Verifique seu email para confirmar o cadastro.');
-            setTimeout(() => navigate('/login'), 3000);
+            setTimeout(() => navigate('/login'), 1000);
         }
     };
 

@@ -44,8 +44,8 @@ export default function Navbar() {
             <TextField.Root variant="soft" size="2" className="search-bar">
                 <TextField.Slot>
                     <MagnifyingGlassIcon height="16" width="16" />
+                    {/* <input placeholder="Buscar..." className="text-field-input" /> */}
                 </TextField.Slot>
-                <input placeholder="Buscar..." className="text-field-input" />
             </TextField.Root>
 
             {/* Menu de usuário */}
